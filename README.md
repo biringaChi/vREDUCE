@@ -1,4 +1,5 @@
-<h3 align = "center"> vReduce: Guided Vocabulary for Reduced Compilation-Level Vulnerabilities Detection </h3>
-___
+<!-- <h3 align = "center"> A Reduced Vocabulary for Cost-Efficient Vulnerabilities Detection </h3> -->
 
+vReduce: A Reduced Vocabulary for Cost-Efficient Vulnerabilities Detection
+<!-- ___ -->
 <!-- ```***Active Dev***. Artifact Author: Chidera Biringa``` -->
