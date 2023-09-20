@@ -1,5 +1,7 @@
 __author__ = "biringaChi (Chidera Biringa)" 
 
+from simpletransformers.language_representation import RepresentationModel
+
 def prepare_sequence(features):
     stmts, exprs, decls = features
     stmts_sequence, exprs_sequence, decls_sequence = [], [], []
@@ -16,3 +18,10 @@ def prepare_sequence(features):
 def batch(sequence, nsteps = 1):
     for idx in range(0, len(sequence), nsteps):
         yield sequence[idx : min(idx + nsteps, len(sequence))]
+
+def _gpt(sequence, batch_n = 32, cuda = True):
+    vectors = []
+    gpt = RepresentationModel(model_type = "gpt2", model_name = "gpt2", use_cuda = cuda)
+    for x in batch(sequence, batch_n):
+        vectors.append(gpt.encode_sentences(x, combine_strategy = "mean", batch_size = len(x)))
+    return [i for vector in vectors for i in vector]
