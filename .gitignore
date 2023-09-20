@@ -133,7 +133,6 @@ our.ipynb
 pace.ipynb
 cade.ipynb
 results.txt
-
 data
 devign/functions
 devign/x
@@ -142,4 +141,8 @@ draper
 mvd
 devign
 d2a
+
+vreduce.ipynb
+ceed.ipynb
+vclean.ipynb
 models.py
