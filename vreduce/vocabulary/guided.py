@@ -57,6 +57,19 @@ class Guided:
                 temp.append(feature.translate(str.maketrans("", "", string.punctuation)))
             out.append(temp)
         return out
+    
+    def vocabulary_size(self):
+        train_asts, dev_asts, test_asts = self.get_asts(train), self.get_asts(dev), self.get_asts(test)
+        combined = train_asts + dev_asts + test_asts
+        d2a_cbn_stmts = self.extract_features(combined, "Stmt")
+        d2a_cbn_exprs = self.extract_features(combined, "Expr")
+        d2a_cbn_decls = self.extract_features(combined, "Decl")
+        d2a_cbn_ftr = d2a_cbn_stmts + d2a_cbn_exprs + d2a_cbn_decls
+        vocab = set()
+        for data in d2a_cbn_ftr:
+            for i in data:
+                vocab.add(i)
+        return len(vocab)
 
 if __name__ == "__main__":
     Guided()
