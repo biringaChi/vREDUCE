@@ -3,3 +3,5 @@
 vReduce: A Reduced Vocabulary for Cost-Efficient Vulnerabilities Detection with GPT
 <!-- ___ -->
 <!-- ```***Active Dev***. Artifact Author: Chidera Biringa``` -->
+
+Author: Chidera Biringa

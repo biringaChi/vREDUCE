@@ -4,7 +4,6 @@ import time
 import pickle
 from simpletransformers.language_representation import RepresentationModel
 
-
 def pickle_data(data, file_name):
     with open(file_name, 'wb') as file:
         pickle.dump(data, file)
@@ -41,8 +40,50 @@ def _gpt(sequence, name, batch_n = 32, cuda = True):
     print(len(vectors))
 
 if __name__ == "__main__":
-    sequence = unpickle_data("d2a_sequence.pkl")
+    # Train starts
+    sequence = unpickle_data("d2a_train_stmts_sequence.pkl")
     start = time.time()
-    print(">_D2A Starts")
-    _gpt(sequence, "d2a_embeddings.pkl")
-    print(f">_D2A Ends: {time.time() - start}")
+    _gpt(sequence, "d2a_train_stmts_embeddings.pkl")
+    print(f"Run time: {time.time() - start}")
+
+    sequence = unpickle_data("d2a_train_exprs_sequence.pkl")
+    start = time.time()
+    _gpt(sequence, "d2a_train_exprs_embeddings.pkl")
+    print(f"Run time: {time.time() - start}")
+
+    sequence = unpickle_data("d2a_train_decls_sequence.pkl")
+    start = time.time()
+    _gpt(sequence, "d2a_train_decls_embeddings.pkl")
+    print(f"Run time: {time.time() - start}")
+
+    #  Dev starts
+    sequence = unpickle_data("d2a_dev_stmts_sequence.pkl")
+    start = time.time()
+    _gpt(sequence, "d2a_dev_stmts_embeddings.pkl")
+    print(f"Run time: {time.time() - start}")
+
+    sequence = unpickle_data("d2a_dev_exprs_sequence.pkl")
+    start = time.time()
+    _gpt(sequence, "d2a_dev_exprs_embeddings.pkl")
+    print(f"Run time: {time.time() - start}")
+
+    sequence = unpickle_data("d2a_dev_decls_sequence.pkl")
+    start = time.time()
+    _gpt(sequence, "d2a_dev_decls_embeddings.pkl")
+    print(f"Run time: {time.time() - start}")
+
+    # Test starts
+    sequence = unpickle_data("d2a_test_stmts_sequence.pkl")
+    start = time.time()
+    _gpt(sequence, "d2a_test_stmts_embeddings.pkl")
+    print(f"Run time: {time.time() - start}")
+
+    sequence = unpickle_data("d2a_test_exprs_sequence.pkl")
+    start = time.time()
+    _gpt(sequence, "d2a_test_exprs_embeddings.pkl")
+    print(f"Run time: {time.time() - start}")
+
+    sequence = unpickle_data("d2a_test_decls_sequence.pkl")
+    start = time.time()
+    _gpt(sequence, "d2a_test_decls_embeddings.pkl")
+    print(f"Run time: {time.time() - start}")
