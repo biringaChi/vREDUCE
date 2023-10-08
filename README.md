@@ -1,4 +1,4 @@
-<h3 align = "center"> vRAG: A Reduced and Augmented Vocabulary for Vulnerabilities Detection </h3>
+<h3 align = "center"> vRAG: A Reduced and Augmented Vocabulary for Efficient Vulnerabilities Detection with GPT </h3>
 <hr>
 
 ```ACTIVE DEV``` 
@@ -8,7 +8,7 @@
 <hr>
 
 ```NOTE```
-> If you are here for the ReVeal dataset, execute  ```$ git clone https://github.com/biringaChi/vRAG``` then nagivate to the ```Datasets -> reveal.csv``` directory
+> If you are here to retreive the missing ReVeal dataset, execute  ```$ git clone https://github.com/biringaChi/vRAG``` then nagivate to the ```Datasets -> reveal.csv``` directory
 
 <hr>
 

@@ -139,6 +139,8 @@ data/devign/x
 d2a/raw
 data/draper
 data/mvd
+muvuldeepecker
+function.json
 data/devign
 data/d2a
 vreduce.ipynb
@@ -150,8 +152,10 @@ models.py
 rapid1.py
 rapid
 rapid2
-vreduce/selected/d2a/embeddings
+vrag/selected/d2a/embeddings
 final
 selected
 final.ipynb
 fts-ems
+datasets/reveal_asts
+mvd.csv
